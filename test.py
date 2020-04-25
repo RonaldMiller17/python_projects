@@ -1,8 +1,8 @@
 # imports
 import os
 import json
-# import requests
-
+import requests
+import spotipy
 
 '''
 Goal is to make some sort of tool using
@@ -23,3 +23,6 @@ user = User()
 print(user.name)
 print(get_user(user, "Test", "Test1"))
 print(os.getcwd())
+
+response = requests.get("https://api.spotify.com/v1/")
+print(response.json)
